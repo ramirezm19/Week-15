@@ -38,14 +38,14 @@ export const NewRoomForm = (props) => {
                 {/* when the text on the input changes, calling the setName method and setting it to the target value*/}
                 <input
                     type='text'
-                    placeholder='name'
+                    placeholder='Room Name'
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                 />
                 <br/>
                 <input
                     type='text'
-                    placeholder='area'
+                    placeholder='Area in square feet'
                     onChange={handleAreaInput}
                     value={area}
                 />

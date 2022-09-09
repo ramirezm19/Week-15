@@ -31,11 +31,13 @@ export class HousesList extends React.Component {
         return (
             //className to do CSS styling
             <div className="houselistmain">
+
                 <div className="newhousearea">
                     <NewHouse />
                 </div>
             
                 <div className="house-list">
+                    <h2> List of Homes in the Neighborhood</h2>
                     {this.state.houses.map((house) => (
                         <House
                             house = {house}

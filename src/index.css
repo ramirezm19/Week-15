@@ -1,3 +1,5 @@
+/* general css */
+
 *{
   padding: 5;
 }
@@ -8,6 +10,12 @@
   color: #1ba098;
 }
 
+/*css for navbar*/
+.navbar {
+  background-color: #1ba098;
+}
+
+/* css for the main header */
 header {
   padding: 50px 15px 15px;
 }
@@ -15,15 +23,53 @@ header {
 header h1 {
   text-align: center;
   color: #deb992;
+  border: solid #deb992;
+  padding: 5px;
 }
 
+/*css for the main house list*/
 main {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
-.navbar {
-  background-color: #1ba098;
+
+/*new house area on the house list*/
+.newhouse {
+  text-align: center;
+  padding: 30px;
+}
+
+/*List of homes*/
+
+.house-list h2 {
+  color: white;
+  padding: 15px 0px;
+  border-bottom: white solid;
+  text-align: center;
+}
+
+.housename h3 {
+  color: white;
+}
+
+.housename-name h4 {
+padding: 0px 30px;
+color: #deb992;
+font-size: 40px;
+}
+
+.homedescription label {
+  padding: 0px 15px;
+}
+
+.homedescription .room {
+  font-size: 25px;
+  font-style: italic;
+}
+
+.homedescription .area {
+  padding: 0px 30px;
 }
 
 .addRoom {
@@ -33,4 +79,8 @@ main {
 
 .addRoom:hover {
   background-color: aqua;
+}
+
+.housename h3 {
+  padding-top: 30px;
 }

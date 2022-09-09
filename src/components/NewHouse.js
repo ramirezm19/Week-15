@@ -4,16 +4,7 @@ import { houseApi, housesApi } from '../rest/HousesApi';
 //functional component that takes props
 export const NewHouse = () => {
     //use hooks, 
-    const [name, setName] = useState('');
-    // const [area, setArea] = useState(undefined);
-
-    //since area a number, validation so that it is a number
-    // const handleAreaInput = (e) => {
-    //     //using parse to make sure it's an interger and round to 10
-    //     const int = parseInt(e.target.value, 10)
-    //     //if Area greater or = to 0 (? means true), then pass in. If not (:), then empty string
-    //     setArea(int >= 0 ? int : '');
-    
+    const [name, setName] = useState('');    
 
     //need to define onSubmit
     const onSubmit = (e) => {
@@ -34,7 +25,7 @@ export const NewHouse = () => {
                 {/* when the text on the input changes, calling the setName method and setting it to the target value*/}
                 <input
                     type='text'
-                    placeholder='name'
+                    placeholder='Name of your new house'
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                     name={name}

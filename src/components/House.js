@@ -47,20 +47,26 @@ export const House = (props) => {
 
     //plural (rooms) -- this component is the rooms, not each individual room and this component will create an instanace of rooms as an li
     const rooms = () => (
-        <ul>
+        <ul className="homedescription">
             {house.rooms.map((room, index) => (
-                <li key={index}>
+                <ul key={index}>
                     {console.log(house.rooms)}
-                    <label> {`${checkRoomName(room)} Area: ${checkRoomArea(room)}`}</label>
-                    <button className="btn btn-primary" onClick={(e) => deleteRoom(room._id)}>Delete</button>
-                </li>
+                        <label className="room">{`${checkRoomName(room)}`}</label> <br/>
+                        <label className="area">{`Area: ${checkRoomArea(room)} square feet`}
+                    </label>
+                    <button className="btn btn-outline-secondary" onClick={(e) => deleteRoom(room._id)}>Delete</button>
+                </ul>
             ))}
         </ul>
     );
 
     return (
-       <div>
-            <h3> {house.name}</h3>
+       <div className="housename">
+            <h3> Home Name: </h3>
+                <div className="housename-name">
+                    <h4>{house.name}</h4>
+                </div>
+
             {
                 //rooms is a function, passing props (what's inside the ({})). The props are all the rooms, the house id, and deleteRoom
                 rooms({ rooms, houseId: house._id, deleteRoom})
