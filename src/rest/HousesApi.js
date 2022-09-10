@@ -14,7 +14,7 @@ class HousesApi {
         //have data returned into json
         const data = await resp.json();
             if (data.length > 3) {
-                data.length = 3;
+                data.reverse().length = 3;
             }
         return data;
         //(3) is the exception, what went wrong
